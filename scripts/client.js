@@ -30,14 +30,20 @@ function readyNow() {
     // selecting grid test div
     let element = $('#gridTest');
 for (let dog of dogs) {
-    let outputString = `
-        <div class ="col-4">
-        <h3>${dog.name}</h3>
-        <p>${dog.breed}</p>
-        <p>${dog.age}</p>
-
-
-        </div>`
+    let outputString =`
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header"><strong>${dog.name}</strong></div>
+                <div class="card-body">Breed:${dog.breed}</div>
+                <div class="card-footer">Age:${dog.age}</div>
+            </div>
+        <div>`
+    
+        // `<div class="col-4">
+        // <h3>${dog.name}</h3>
+        // <p>${dog.breed}</p>
+        // <p>${dog.age}</p>
+        // </div>`
         element.append(outputString);
     }
 }
